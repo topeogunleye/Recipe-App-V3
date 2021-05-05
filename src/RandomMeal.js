@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { useHistory } from 'react-router-dom';
 import SkeletonMealInfo from './skeletons/SkeletonMealInfo';
 import { Link } from 'react-router-dom';
-import { HomeIcon } from '@heroicons/react/solid';
+import { HomeIcon, ChevronLeftIcon } from '@heroicons/react/solid';
 
 const RandomMeal = () => {
   const [ingredients, setIngredients] = useState('');
