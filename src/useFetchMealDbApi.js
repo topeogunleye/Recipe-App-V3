@@ -1,6 +1,5 @@
-import React, { Fragment, useState, useEffect, useReducer } from 'react';
+import { useState, useEffect, useReducer } from 'react';
 import axios from 'axios';
-
 
 const dataFetchReducer = (state, action) => {
   switch (action.type) {
@@ -45,12 +44,12 @@ const useFetchMealDbApi = (initialUrl, initialData) => {
         // setData(result.data);
 
         if (!didCancel) {
-        dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
+          dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
         }
       } catch (error) {
         if (!didCancel) {
-        dispatch({ type: 'FETCH_FAILURE' });
-        // setIsError(true);
+          dispatch({ type: 'FETCH_FAILURE' });
+          // setIsError(true);
         }
       }
       // setIsLoading(false);
@@ -60,7 +59,7 @@ const useFetchMealDbApi = (initialUrl, initialData) => {
 
     return () => {
       didCancel = true;
-    }
+    };
   }, [url]);
 
   // return [{ data, isLoading, isError },state, setUrl, setUrl];
